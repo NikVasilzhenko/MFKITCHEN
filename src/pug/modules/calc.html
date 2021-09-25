@@ -1,0 +1,451 @@
+<section class="calc-section preloader">
+  <div class="container wow fadeInUp" data-wow-delay=".5s">   
+    
+    
+    <div class="calc-tabs">
+      <button type="button" class="calc-tab active" onclick="calcTabSelect(this, 0)">Снижение веса</button>
+      <button type="button" class="calc-tab" onclick="calcTabSelect(this, 1)">Спорт и баланс</button>
+      <button type="button" class="calc-tab" onclick="calcTabSelect(this, 2)">Выбор шефа</button>
+      <button type="button" class="calc-tab" onclick="calcTabSelect(this, 3)">Кето - диета</button>
+      <button type="button" class="calc-tab" onclick="calcTabSelect(this, 4)">Detox</button>
+    </div>
+    <div class="calc-mains">
+      <div class="swiper-container" id="js-calc-mains">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide calc-main">
+            <form action="#" method="get" class="calc" onsubmit="return false">
+              <div class="calc__col">
+
+                <div class="calc-datapickers">
+                    <div class="swiper-container calc-datapickers__slider" id="js-calc-datapickers">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide calc-datapicker">
+                          <div class="calc-datapicker__header">
+                            <b>1 неделя</b> 24.02-30.02
+                          </div>
+                          <ul class="calc-datapicker__days">
+                            <li><a href="#" class="calc-datapicker-day active">Пн</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Вт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Ср</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Чт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Пт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Сб</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Вс</a></li>
+                          </ul>
+                        </div>
+                        <div class="swiper-slide calc-datapicker">
+                          <div class="calc-datapicker__header">
+                            <b>2 неделя</b> 24.02-30.02
+                          </div>
+                          <ul class="calc-datapicker__days">
+                            <li><a href="#" class="calc-datapicker-day active">Пн</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Вт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Ср</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Чт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Пт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Сб</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Вс</a></li>
+                          </ul>
+                        </div>
+                        <div class="swiper-slide calc-datapicker">
+                          <div class="calc-datapicker__header">
+                            <b>3 неделя</b> 24.02-30.02
+                          </div>
+                          <ul class="calc-datapicker__days">
+                            <li><a href="#" class="calc-datapicker-day active">Пн</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Вт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Ср</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Чт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Пт</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Сб</a></li>
+                            <li><a href="#" class="calc-datapicker-day">Вс</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Add Arrows -->
+                      <button type="button" class="swiper-button-prev calc-datapicker-arrow calc-datapicker-arrow--prev" id="js-calc-datapicker-prev">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.25 12.4082L19.25 12.4082" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M10.2998 6.38386L4.2498 12.4079L10.2998 18.4329" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <button type="button" class="swiper-button-next calc-datapicker-arrow calc-datapicker-arrow--next" id="js-calc-datapicker-next">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19.75 12.4082L4.75 12.4082" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.7002 6.38386L19.7502 12.4079L13.7002 18.4329" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                </div>
+
+                <h2 class="calc__title"><span>Меню на день</span></h2>
+                <div class="calc-menu">
+                    <!-- --1 -->
+    <!--
+                    <div class="swiper-container calc-gallery calc-gallery--1">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                      </div>                  
+                    </div>
+    -->
+                    <!-- --1 end -->
+
+                    <!-- --2 -->
+    <!--
+                    <div class="swiper-container calc-gallery calc-gallery--2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                      </div>                  
+                    </div>
+    -->
+                    <!-- --2 end -->
+
+                    <!-- --3 -->
+    <!--
+                    <div class="swiper-container calc-gallery calc-gallery--3">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                      </div>                  
+                    </div>
+    -->
+                    <!-- --3 end -->
+
+                    <!-- --4, --5, --6 -->
+    <!--
+                    <div class="swiper-container calc-gallery calc-gallery--4">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                      </div>                  
+                    </div>
+    -->
+                    <!-- --4, --5, --6 end -->
+
+
+                    <!-- 6+ -->
+                    <div class="swiper-container calc-gallery" id="js-calc-gallery">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide calc-gallery__item active" onclick="selectItem(this,0)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,1)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,2)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,3)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,4)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,5)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,6)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,7)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,8)"><img src="img/pic/food.png" alt=""></div>
+                        <div class="swiper-slide calc-gallery__item" onclick="selectItem(this,9)"><img src="img/pic/food.png" alt=""></div>
+                      </div>                  
+                    </div>
+                    <button type="button" class="swiper-button-prev calc-gallery-arrow calc-gallery-arrow--prev" id="js-calc-gallery-prev">
+                      <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.097 18.786L9.95964 12.6486L16.097 6.51123" stroke="white" stroke-width="2.0458" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                    <button type="button" class="swiper-button-next calc-gallery-arrow calc-gallery-arrow--next" id="js-calc-gallery-next">
+                      <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1891 18.786L16.3265 12.6486L10.1891 6.51123" stroke="white" stroke-width="2.0458" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                    <!-- 6+ end -->
+                </div>
+
+                <div class="calc-table">
+                  <h3 class="calc-table__title"><span>Всего в понедельник</span></h3>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>кКал</th>
+                        <th>Белки</th>
+                        <th>Жиры</th>
+                        <th>Углеводы</th>
+                        <th>Блюд</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>750</td>
+                        <td>55 г</td>
+                        <td>35 г</td>
+                        <td>55 г</td>
+                        <td>4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="calc__col">
+                <div class="swiper-container calc-slidshow" id="js-calc-slidshow">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                    <div class="swiper-slide calc-slidshow__item">
+                      <figure class="calc-slidshow-fig">
+                        <div class="calc-slidshow-fig__img"><img src="img/pic/food.png" alt=""></div>
+                        <figcaption class="calc-slidshow-fig__caption">
+                          <h3 class="calc-slidshow-fig__title"><span>Завтрак</span></h3>
+                          <p class="calc-slidshow-fig__txt">Салат с нутом и куриной грудкой су-вид</p>
+                          <button class="calc-slidshow-fig__btn" onclick="showPopup()">Карта блюда</button>
+                          <button class="calc-slidshow-fig__popup" onclick="openCalcPopup()">
+                            <span class="calc-slidshow-fig__popup-icn">i</span>
+                            <span class="calc-slidshow-fig__popup-txt">Калории</span>
+                          </button>
+                        </figcaption>
+                      </figure>                  
+                    </div>
+                  </div>
+                  <button type="button" class="swiper-button-prev calc-slidshow-arrow calc-slidshow-arrow--prev" id="js-calc-slidshow-prev">
+                    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.097 18.786L9.95964 12.6486L16.097 6.51123" stroke="white" stroke-width="2.0458" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="swiper-button-next calc-slidshow-arrow calc-slidshow-arrow--next" id="js-calc-slidshow-next">
+                    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.1891 18.786L16.3265 12.6486L10.1891 6.51123" stroke="white" stroke-width="2.0458" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="calc__col">
+                <div class="calc-checking">
+                  <h3 class="calc-checking__title"><span>Калорийность</span></h3>
+                  <div class="calc-checking__list">
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">1000 ккал</span>
+                      </span>
+                    </div>
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">1200 ккал</span>
+                      </span>
+                    </div>
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">1500 ккал</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="calc-checking">
+                  <h3 class="calc-checking__title"><span>Количество дней</span></h3>
+                  <div class="calc-checking__list">
+                    <div class="calc-check active">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">1 день</span>
+                        <span class="calc-check__sub">1000 р/день</span>
+                      </span>
+                    </div>
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">1 день</span>
+                        <span class="calc-check__sub">1000 р/день</span>
+                      </span>
+                    </div>
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">5 дней</span>
+                        <span class="calc-check__sub">1000 р/день</span>
+                      </span>
+                    </div>
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">6 дней</span>
+                        <span class="calc-check__sub">1000 р/день</span>
+                      </span>
+                    </div>
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">14 дней</span>
+                        <span class="calc-check__sub">1000 р/день</span>
+                      </span>
+                    </div>
+                    <div class="calc-check">
+
+                      <span class="calc-check__wrap">
+                        <span class="calc-check__name">30 дней</span>
+                        <span class="calc-check__sub">1000 р/день</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="calc-result">
+                  <div class="calc-result__main">Итого 14 дней: <strong>13 300 р.</strong></div>
+                  <div class="calc-result__sub">495 ₽ вернем бонусами</div>
+                </div>
+
+                <button class="calc-submit js-bubbly-button" type="submit"><span>Оформить заказ</span></button>
+              </div>
+            </form>
+          </div>
+
+
+          <div class="swiper-slide calc-main"><form action="#" method="get" class="calc">Спорт и баланс</form></div>
+          <div class="swiper-slide calc-main"><form action="#" method="get" class="calc">Выбор шефа</form></div>
+          <div class="swiper-slide calc-main"><form action="#" method="get" class="calc">Кето - диета</form></div>
+          <div class="swiper-slide calc-main"><form action="#" method="get" class="calc">Detox</form></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+    </div>
+    <div class="calc-mob-popup" id="js-calc-mob-popup">
+      <div class="calc-mob-popup__overlay" onclick="openCalcPopup()"></div>
+      <div class="calc-mob-popup__main">
+        <div class="calc-table">
+          <h3 class="calc-table__title"><span>Всего в понедельник</span></h3>
+          <table>
+            <thead>
+              <tr>
+                <th>кКал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+                <th>Блюд</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>750</td>
+                <td>55 г</td>
+                <td>35 г</td>
+                <td>55 г</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>

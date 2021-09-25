@@ -1,0 +1,42 @@
+.mob-bar{
+  display: none;
+  @media only screen and (max-width : 800px){
+    @include blur;
+    display: block;
+    position: fixed;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: none;
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 5rem;
+    }
+  }
+}
+.mob-bar-link{
+  display: block;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  text-align: center;
+  letter-spacing: -0.26496px;
+  color: #8C8C8C;
+  &__icn{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 auto .4rem;
+    svg{
+      @include svg-reset;
+    }
+  }
+  &.active{
+    color: #CB74AD;
+  }
+}

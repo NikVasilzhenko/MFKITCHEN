@@ -1,0 +1,234 @@
+.reviews{
+  &__wrap{
+    height: 90rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before,
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/svg/ellipse.svg) center center no-repeat;
+      background-size: 100% 100%;
+    }
+    &::before{
+      width: 46.7rem;
+      height: 46.7rem;
+    }
+    &::after{
+      width: 63.4rem;
+      height: 63.4rem;
+    }
+  }
+  &__title{
+    @include h2;
+    position: relative;
+    z-index: 1;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/svg/ellipse.svg) center center no-repeat;
+      background-size: 100% 100%;
+      width: 79.4rem;
+      height: 79.4rem;
+    }
+  }
+  @media only screen and (max-width : 800px){
+    &__wrap{
+      height: 90rem;
+      &::before{
+        width: 36.6rem;
+        height: 36.6rem;
+      }
+      &::after{
+        width: 49.7rem;
+        height: 49.7rem;
+      }
+    }
+    &__title{
+      &::before{
+        width:62.2rem;
+        height: 62.2rem;
+      }
+    }
+  }
+}
+.review{
+  @include blur;
+  position: absolute;
+  width: 32.8rem;
+  padding: 2rem 2.8rem;
+  font-size: 1.6rem;
+  line-height: 120%;
+  letter-spacing: -.05em;
+  color: #000;
+  z-index: 3;
+  transition: transform .3s;
+  &:hover{
+    transform: scale(1)  !important;
+    z-index: 10;
+  }
+  &__header{    
+    margin-bottom: 1.2rem;
+    display: block;
+    font-style: normal;
+    &-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &__ava{
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-right: 2.8rem;
+  }
+  &--1{
+    top: 14.6rem;
+    right: 50%;
+    margin-right: 14rem;
+    transform: scale(1.07);
+    backdrop-filter: blur(29.7px);
+    transform-origin: 0 100%;
+  }
+  &--2{
+    bottom: 13.7rem;
+    right: 50%;
+    margin-right: -17.4rem;
+    backdrop-filter: blur(29.7px);
+  }
+  &--3{
+    top: 5.7rem;
+    left: 50%;
+    margin-left: -8.7rem;
+    transform: scale(0.884);
+    backdrop-filter: blur(24.7px);
+    transform-origin: 0 0;
+  }
+  &--4{
+    top: 37rem;
+    left: 0;
+    transform: scale(0.8628);
+    backdrop-filter: blur(24px);
+    transform-origin: 0 0;
+  }
+  &--5{
+    top: 25.2rem;
+    right: 2rem;
+    transform: scale(0.82);
+    backdrop-filter: blur(14px);
+    transform-origin: 0 100%;
+  }
+  &--6{
+    bottom: 11.7rem;
+    right: 3.2rem;
+    transform: scale(0.676);
+    backdrop-filter: blur(18px);
+    transform-origin: 100% 100%;
+  }
+  &--7{
+    bottom: 12.8rem;
+    left: 8rem;
+    transform: scale(0.799);
+    backdrop-filter: blur(22px);
+    transform-origin: 100% 100%;
+  }
+  &--8{
+      top: 31.8rem;
+      right: 50%;
+      margin-right: -10.4rem;
+      transform: scale(0.58);
+      backdrop-filter: blur(16px);
+    transform-origin: 100% 0;
+  }
+  &--9{
+    top: 7rem;
+    left: 50%;
+    margin-left: -16rem;
+    transform: scale(.155);
+    backdrop-filter: blur(29.7px);
+    transform-origin: 0 0;
+  }
+  &--10{
+    top: 17rem;
+    left: 50%;
+    margin-left: 26rem;
+    transform: scale(.351);
+    backdrop-filter: blur(29.7px);
+    transform-origin: 0 0;
+  }
+  &--11{
+    bottom: 27.6rem;
+    left: 50%;
+    margin-left: 22rem;
+    transform: scale(.391);
+    backdrop-filter: blur(29.7px);
+    transform-origin: 0 100%;
+  }
+  &--12{
+    bottom: 3.2rem;
+    right: 50%;
+    margin-right: 4rem;
+    transform: scale(.281);
+    backdrop-filter: blur(29.7px);
+    transform-origin: 100% 100%;
+  }
+  @media only screen and (max-width : 800px){
+    &--1 {
+      top: 14.6rem;
+      margin-right: 2rem;
+      transform: scale(0.57);
+    }
+    &--2{
+      bottom: 23.7rem;
+      margin-right: -17.4rem;
+      transform: scale(.55);
+    }
+    &--3{
+      top: 10.2rem;
+      margin-left: -7.7rem;
+      transform: scale(.794);
+    }
+    &--4 {
+      top: 50rem;
+      left: -123px;
+      transform: scale(.5628);
+    }
+    &--5 {
+      top: 19.2rem;
+      right: -1rem;
+      transform: scale(.52);
+    }
+    &--6{
+      bottom: 11.7rem;
+      right: -1.8rem;
+      transform: scale(.476);
+    }
+    &--7 {
+      bottom: 15.8rem;
+      left: -22rem;
+      transform: scale(.45);
+    }
+    &--8{margin-right: -30rem;}
+    &--9{top: 16rem;}
+    &--12{
+      bottom: 16.6rem;
+      margin-right: -4rem;
+      transform: scale(.221);
+    }
+  }
+}

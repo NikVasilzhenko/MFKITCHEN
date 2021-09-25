@@ -1,0 +1,231 @@
+.team{
+  &__wrap{
+    height: 90rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before,
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/svg/ellipse.svg) center center no-repeat;
+      background-size: 100% 100%;
+    }
+    &::before{
+      width: 46.7rem;
+      height: 46.7rem;
+    }
+    &::after{
+      width: 63.4rem;
+      height: 63.4rem;
+    }
+  }
+  &__title{
+    @include h2;
+    position: relative;
+    z-index: 1;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/svg/ellipse.svg) center center no-repeat;
+      background-size: 100% 100%;
+      width: 79.4rem;
+      height: 79.4rem;
+    }
+  } 
+  @media only screen and (max-width : 800px){
+    &__wrap{
+      height: 71.6rem;
+      &::before{
+        width: 36.6rem;
+        height: 36.6rem;
+      }
+      &::after{
+        width: 49.7rem;
+        height: 49.7rem;
+      }
+    }
+    &__title{
+      &::before{
+        width:62.2rem;
+        height: 62.2rem;
+      }
+    }
+  }
+}
+.team-item{
+  @include blur;
+  position: absolute;
+  z-index: 2;
+  width: 39rem;
+  overflow: hidden;
+  box-shadow: 0 3.8rem 4rem rgba(107, 74, 115, .18);
+  &--1{
+    top: 17.7rem;
+    left: 50%;
+    margin-left: -3.2rem;
+  }
+  &--2{
+    top: 30rem;
+    right: 50%;
+    margin-right: 10.8rem;
+  }
+  &--3{
+    bottom: 24.5rem;
+    right: 50%;
+    margin-right: -2rem;
+    z-index: 4;
+  }
+  &--4{
+    bottom: 17.4rem;
+    left: 50%;
+    margin-left: -1rem;
+    z-index: 3;
+  }
+  &--5{
+    bottom: 32.5rem;
+    right: 10rem;
+    transform-origin: 100% 100%;
+    transform: scale(0.813);
+  }
+  &--6{
+    bottom: 16.3rem;
+    right: 50%;
+    margin-right: 11rem;
+    transform-origin: 100% 100%;
+    transform: scale(0.182);
+    filter: blur(5px);
+  }
+  &--7{
+    top: 36.1rem;
+    left: 50%;
+    margin-left: 15rem;
+    transform-origin: 0 0;
+    transform: scale(0.341);
+    filter: blur(2px);
+  }
+  &--8{
+    top: 21.7rem;
+    right: 50%;
+    margin-right: 12.6rem;
+    transform-origin: 100% 0;
+    transform: scale(0.341);
+  }
+  @media only screen and (max-width : 800px){
+    width: 33.5rem;
+    box-shadow: 0 3.2rem 3.4rem rgba(107, 74, 115, .18);
+    &--1{
+      top: 14.7rem;
+      z-index: 10;
+      margin-left: -15.2rem;
+    }
+    &--2{
+      top: 40rem;
+      margin-right: -16.2rem;
+      z-index: 4;
+    }
+    &--3{
+      bottom: 40rem;
+      margin-right: -14rem;
+    }
+    &--4{
+      bottom: 3.4rem;
+      margin-left: -16rem;
+    }
+    &--5{
+      bottom: 15.5rem;
+      right: 1rem;
+    }
+    &--6{
+      bottom: 2rem;
+      margin-right: -19rem;
+    }
+    &--7{
+      top: 4rem;
+      margin-left: 4.8rem;
+    }
+    &--8{
+      top: 7.7rem;
+      margin-right: 3.6rem;
+    }
+  }
+}
+.team-unit{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  &__pic{
+    width: 13rem;
+    min-height: 12.5rem;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      max-width: unset;
+      transition: opacity .25s;
+      &:last-child{opacity: 0;}
+    }
+  }
+  &__main{
+    flex-grow: 1;
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__name{
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 130%;
+    color: #393939;
+  }
+  &__status{
+    font-size: 1.4rem;
+    line-height: 130%;
+    &.yellow{color: #FFC200;}
+    &.green{color: #53B561;}
+  }
+  &__cantry{
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 130%;
+    color: #393939;
+    opacity: .5;
+  }
+  &:hover{
+    .team-unit__pic{
+      img{
+        &:last-child{opacity: 1;}
+        &:first-child{opacity: 0;}
+      }
+    }
+  }
+  @media only screen and (max-width : 800px){
+    &__pic{
+      width: 9.6rem;
+      min-height: 9.6rem;
+    }
+    &__main{padding: 1.2rem 1.2rem 1.2rem 2.2rem;}
+    &__name{font-size: 1.7rem;}
+    &__status{font-size: 1.2rem;}
+    &__cantry{font-size: 1.2rem;}
+  }
+}

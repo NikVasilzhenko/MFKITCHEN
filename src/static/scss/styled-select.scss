@@ -1,0 +1,54 @@
+.styled-select{
+  position: relative;
+  select{display: none;}
+}
+.select-selected {
+  background: #fff; 
+  height: 5rem;
+  line-height: 5rem;
+  color: #8C8C8C;
+  padding: 0 6rem 0 1.8rem;
+  border: 1px solid #8C8C8C;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.select-selected:after {
+  position: absolute;
+  content: '';
+  background: url(../img/svg/dropdown.svg) center center no-repeat;
+  width: 4.7rem;
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-left: .5px solid #BBBBBB;
+}
+.select-selected.select-arrow-active{border-radius: 1.5rem 1.5rem 0 0;}
+.select-items div{
+  color: #8C8C8C;
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+.select-items {
+  margin-top: -1px;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #8C8C8C;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 0 0 1.5rem 1.5rem;
+  max-height: 25rem;
+  overflow-y: auto;
+}
+.select-hide {display: none;}
+.select-items div:hover, .same-as-selected {
+  background-color: #ebebeb;
+  color: #11071b;
+}
+div.same-as-selected{color: #11071b;}

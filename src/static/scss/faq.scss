@@ -1,0 +1,120 @@
+.faq{
+  padding: 32rem 0;
+  &__wrap{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__main{
+    width: 42rem;
+    padding-right: 2rem;
+    flex-shrink: 0;
+  }
+  &__title{
+    @include h2;
+  }
+  &__txt{
+    @include sec-txt;
+    margin-top: 2.2rem;
+  }
+  @media only screen and (max-width : 800px){
+    padding: 6rem .8rem 13rem;
+    &__wrap{display: block;}
+    &__main{
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 2.6rem;
+    }
+    &__txt{
+      @include sec-txt;
+      margin-top: 2.2rem;
+    }
+  }
+}
+.faq-accordion{flex-grow: 1;}
+.faq-accordion-item{
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid #11071B;
+  &:last-child{margin-bottom: 0;}
+  &__btn{
+    cursor: pointer;
+    position: relative;
+    padding: 0 4.8rem .8rem 0;
+    opacity: .5;
+    transition: opacity .25s;
+    color: #11071B;  
+    &.open,
+    &:hover{opacity: 1;}
+    &.open{
+      .faq-accordion-item__icn{
+        &::after,
+        &::before{transform: rotate(45deg);}
+      }
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 130%;
+  }
+  &__icn{    
+    position: absolute;
+    right: 1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -.4rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #11071B;
+    border-radius: .5rem;    
+    &::after,
+    &::before{
+      content: '';
+      display: block;      
+      border-radius: 2px;
+      background-color: #F4F4F4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: transform .25s;
+    }
+    &::after{
+      width: 1rem;
+      height: 2px;
+      margin: -1px 0 0 -.5rem;
+    }
+    &::before{
+      width: 2px;
+      height: 1rem;
+      margin: -.5rem 0 0 -1px;
+    }
+  }
+  &__hide{
+    padding: 0 3.4rem 2.8rem 0;
+    opacity: .8;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 130%;
+    display: none;
+  }
+  @media only screen and (max-width : 800px){
+    &__btn{
+      padding: 0 3.2rem 1.7rem 0;
+    }
+    &__title{font-size: 1.8rem;}
+    &__icn{
+      right: 0;
+      top: 0;
+      margin-top: .2rem;
+      transform: none;
+    }
+    &__hide{
+      padding: 0 3.4rem 2.8rem 0;
+      opacity: .8;
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 130%;
+      display: none;
+    }
+  }
+}

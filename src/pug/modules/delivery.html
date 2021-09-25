@@ -1,0 +1,68 @@
+<section class="delivery">
+  <div class="container">
+    <div class="delivery__wrap">      
+      <div class="delivery__main">
+        <h2 class="delivery__title">
+          <span class="wow fadeInDown" data-wow-delay=".5s">Зона</span>
+          <span class="wow fadeInRight" data-wow-delay=".5s">доставки</span>
+        </h2>
+        <div class="delivery-map wow fadeInLeft" data-wow-delay=".5s">
+          <div class="delivery-map__wrap" id="js-map"></div>
+        </div>
+        <div class="delivery__content wow fadeInUp" data-wow-delay=".5s">
+          <ul class="delivery-legend">
+            <li class="delivery-legend-item">
+              <div class="delivery-legend-item__color" style="background-color: #27AE60;"></div>
+              <div class="delivery-legend-item__name">Внутри МКАД</div>
+              <div class="delivery-legend-item__desc" style="color: #27AE60;">Бесплатно</div>
+            </li>
+            <li class="delivery-legend-item">
+              <div class="delivery-legend-item__color" style="background-color: #A4BF00;"></div>
+              <div class="delivery-legend-item__name">до 10 км от МКАД</div>
+              <div class="delivery-legend-item__desc" style="color: #A4BF00;">Бесплатно</div>
+            </li>
+            <li class="delivery-legend-item">
+              <div class="delivery-legend-item__color" style="background-color: #FF994F;"></div>
+              <div class="delivery-legend-item__name">10-20 от МКАД</div>
+              <div class="delivery-legend-item__desc" style="color: #FF994F;">300 ₽</div>
+            </li>
+            <li class="delivery-legend-item">
+              <div class="delivery-legend-item__color" style="background-color: #E51942;"></div>
+              <div class="delivery-legend-item__name">20-30 от МКАД</div>
+              <div class="delivery-legend-item__desc" style="color: #E51942;">500 ₽</div>
+            </li>
+          </ul>
+          <form action="#" method="get" class="delivery-form">
+            <div class="delivery-form__input-group">
+              <input type="text" name="delivery_address" class="delivery-form__input" placeholder="Введите свой адрес для проверки" oninput="showDrop(this)">
+              <div class="delivery-form__input-drop" id="js-inpt-drop">
+                <div class="delivery-form__input-drop-item"><mark>Моск</mark>ва</div>
+                <div class="delivery-form__input-drop-item"><mark>Моск</mark>овский, поселение <mark>Моск</mark>овский, г Москва</div>
+                <div class="delivery-form__input-drop-item"><mark>Моск</mark>али, Томский р-н, Томская обл</div>
+                <div class="delivery-form__input-drop-item"><mark>Моск</mark>овщина, Иркутский р-н, Иркутская обл</div>
+                <div class="delivery-form__input-drop-item"><mark>Моск</mark>овский, г Екатеринбург, Свердловская обл</div>
+              </div>
+            </div>
+            <p class="delivery-form__txt">Доставка еды осуществляется собственной логистической службой через день с рационом питания на 2 дня.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script>
+ymaps.ready(init);
+  var map;						
+  function init(){     
+    map = new ymaps.Map("js-map", {
+      center: [55.755814, 37.617635],
+      zoom: 10,
+      controls: []
+    });
+    map.behaviors.disable('scrollZoom');
+    
+  };    
+</script> 

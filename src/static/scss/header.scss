@@ -1,0 +1,80 @@
+.header{
+  position: relative;
+  z-index: 110;
+  @media only screen and (max-width : 800px){
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.header-top{
+  background-color: #FBD1ED;
+  &__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    @media only screen and (max-width : 800px){
+      height: 5.4rem;
+      padding: 0 1.8rem;
+    }
+  }
+}
+.header-tools{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__item{
+    margin-right: 5.2rem;
+    &:last-child{margin-right: 0;}
+  } 
+  @media only screen and (max-width : 800px){
+    &__item{margin: 0;}
+  }
+}
+.header-link{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &__icn{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: .8rem;
+    svg{@include svg-reset;}
+  }
+  &__txt{
+    font-size: 1.5rem;
+    color: #11071B;
+    white-space: nowrap;
+  }
+  &[href^="tel:"]{
+    .header-link__txt{
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+  }  
+}
+.header-fix{
+  position: fixed;
+  z-index: 110;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  width: 136rem;
+  @include blur;
+  &__wrap{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.4rem;
+  }
+  &--short{top: 0;}
+  @media only screen and (max-width : 800px){
+    display: none;
+  }
+}
+
+

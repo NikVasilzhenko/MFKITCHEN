@@ -1,0 +1,161 @@
+@mixin svg-reset{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  transition: fill .25s, stroke .25s;
+}
+@mixin blur {
+  border-radius: 1.5rem;
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, .4);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@mixin h2 {
+  font-weight: bold;
+  font-size: 15rem;
+  line-height: 80%;
+  letter-spacing: -.05em;
+  text-transform: uppercase;
+  color: #11071B;
+  @media only screen and (max-width : 800px){
+    font-size: 7.8rem;
+  }
+}
+
+@mixin main-txt{
+  font-size: 2.3rem;
+  line-height: 140%;
+  letter-spacing: .037em;
+  text-transform: uppercase;
+  color: #11071B;  
+  strong, span{
+    font-weight: 400;
+    color: #CB74AD;
+  }
+  @media only screen and (max-width : 800px){
+    font-size: 2.1rem;
+    line-height: 116%;
+  }
+}
+@mixin sec-txt{
+  font-size: 1.6rem;
+  line-height: 142%;
+  text-transform: uppercase;
+  color: #11071B;  
+  strong, span{
+    font-weight: 400;
+    color: #CB74AD;
+  }
+}
+@mixin arrow{
+  @include btn-reset;
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 5.4rem;
+  margin-top: -2.7rem;
+  display: flex;
+  align-items: center;
+  background-color: #CB74AD;
+  border: 2px solid #e3b5d3;
+  &.swiper-button-disabled{
+    opacity: .25;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+  }
+  svg{
+    @include svg-reset;
+    width: 2.4rem;
+    min-width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+@mixin arrow-prew{
+  @include arrow;  
+  left: 0;  
+  border-radius: 0 2.7rem 2.7rem 0;  
+  justify-content: flex-end;
+  border-left: none;
+  svg{margin-right: 3px;}
+}
+@mixin arrow-next{
+  @include arrow;  
+  right: 0;  
+  border-radius: 2.7rem 0 0 2.7rem;  
+  justify-content: flex-start;
+  border-right: none;
+  svg{margin-left: 3px;}
+}
+
+//form resets
+@mixin btn-reset{
+  display: block;
+  padding: 0;
+  outline: 0!important;
+  outline-color: transparent!important;
+  outline-width: 0!important;
+  outline-style: none!important;
+  border: none;
+  background: none;
+  transition: .25s ease;  
+  cursor: pointer;
+  border-radius: 0;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &::-moz-focus-inner {border: 0;}
+  &:disabled {
+    cursor: default;
+    opacity: 1;
+    user-select: none;	
+  }
+}
+@mixin input-reset{
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  transition: .25s ease;  
+  padding: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type="number"] {-moz-appearance: textfield;}
+  &[type="number"]:hover,
+  &[type="number"]:focus {-moz-appearance: number-input;}
+  &[type=number]::-webkit-inner-spin-button,
+  &[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+@mixin fieldset-reset{
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+@mixin textarea-reset{
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: .25s ease;  
+  padding: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  resize: none;
+}
+@mixin form-reset{margin: 0;}

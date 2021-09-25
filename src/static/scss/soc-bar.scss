@@ -1,0 +1,30 @@
+.soc-bar{
+  @include blur;
+  position: fixed;
+  top: 50%;
+  right: -1rem;
+  padding: .8rem .8rem .8rem 0;
+  width: 5.3rem;
+  transform: translateY(-50%);
+  li{
+    margin-bottom: 1.6rem;
+    &:last-child{margin-bottom: 0;}
+  }
+  @media only screen and (max-width : 800px){
+    display: none;
+  }
+}
+.soc-bar-link{
+  width: 4.2rem;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    @include svg-reset;
+    fill: #11071B;
+  }
+  &:hover{
+    svg{fill: #FBD1ED;}
+  }
+}
